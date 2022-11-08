@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+  </head>
+  <body>
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Введите значения:</legend>
+
+        <label for="f01">Плотность, кг/м3:</label>
+        <input type="number" name="f01" value="2030.0" required><br><br>
+
+        <label for="f02">Модуль упругости, ГПа:</label>
+        <input type="number" name="f02" value="738.737" required><br><br>
+
+        <label for="f03">Количество отвердителя, м.%:</label>
+        <input type="number" name="f03" value="50.0" required><br><br>
+
+        <label for="f04">Содержание эпоксидных групп,%_2:</label>
+        <input type="number" name="f04" value="23.75" required><br><br>
+
+        <label for="f05">Температура вспышки, С_2	:</label>
+        <input type="number" name="f05" value="284.615" required><br><br>
+
+        <label for="f06">Поверхностная плотность, г/м2:</label>
+        <input type="number" name="f06" value="210.0" required><br><br>
+
+        <label for="f07">Модуль упругости при растяжении, ГПа:</label>
+        <input type="number" name="f07" value="70.0" required><br><br>
+
+        <label for="f08">Прочность при растяжении, МПа:</label>
+        <input type="number" name="f08" value="3000.0" required><br><br>
+
+        <label for="f09">Потребление смолы, г/м2	:</label>
+        <input type="number" name="f09" value="220.0" required><br><br>
+
+        <label for="f10">Угол нашивки, град:</label>
+        <input type="number" name="f10" value="0.0" required><br><br>
+
+        <label for="f11">Шаг нашивки:</label>
+        <input type="number" name="f11" value="4.0" required><br><br>
+
+        <label for="f12">Плотность нашивки:</label>
+        <input type="number" name="f12" value="60.0" required><br><br>
+
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+    <div class="result" align="center">
+      {% if result %}
+              <br> <p style="font-size:50px">Соотношение матрица-наполнитель:</p>
+                     <p style="font-size:50px">{{ result }}</p>
+      {% endif %}
+  </div>
+</form>
+  </body>
+</html>
